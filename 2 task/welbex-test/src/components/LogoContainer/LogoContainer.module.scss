@@ -1,0 +1,19 @@
+@import 'src/styles/fonts';
+
+$width: 165px;
+
+.LogoContainer {
+  padding: 10px 0;
+}
+
+.LogoContainer__Text {
+  width: $width;
+  display: flex;
+  font-size: 10px;
+  line-height: 12px;
+  @include fontMontserrat(300);
+}
+
+.LogoContainer__Logo {
+  margin-bottom: 8px;
+}

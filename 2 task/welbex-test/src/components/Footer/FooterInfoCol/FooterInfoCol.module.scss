@@ -1,0 +1,77 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/links';
+@import 'src/styles/media';
+
+.FooterInfoCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.FooterInfoCol__Header {
+  display: block;
+  @include fontInter(700);
+  @include fontLarge();
+  letter-spacing: 0.05em; 
+  color: #656566;
+  min-height: 18px;
+  margin-bottom: 20px;
+  flex: 0 0 auto;
+}
+
+.FooterInfoCol__Links {
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+
+.FooterInfoCol__Link {
+  display: block;
+  margin-bottom: 10px;
+  @include linkStyle();
+  @include fontInter(400);
+  @include fontLarge();
+  min-width: 212px;
+}
+
+.FooterInfoCol__Link:visited {
+  @include linkVisited();
+}
+
+.FooterInfoCol__Link:hover {
+  @include linkOnHover();
+}
+
+.FooterInfoCol__LinksColumn:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+  margin-right: 52px;
+}
+
+@include tabletMedia {
+  .FooterInfoCol__LinksColumn:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+@include mobileMedia {
+  .FooterInfoCol__LinksColumn:not(:last-child) {
+    margin-right: 18px;
+  } 
+
+  .FooterInfoCol__LinksColumn {
+    flex: 1 1;
+  }
+
+  .FooterInfoCol__Link {
+    display: block;
+    margin-bottom: 10px;
+    @include fontMedium();
+    min-width: auto;
+  }
+
+  .FooterInfoCol__Header {
+    @include fontSmall(15px);
+  }
+}

@@ -1,0 +1,18 @@
+@import 'src/styles/media';
+
+.InfoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 85px 0 70px 0;
+  align-items: center;
+}
+
+@include mobileMedia {
+  .InfoContainer {
+    flex-direction: column;
+    justify-content: start;
+    padding: 105px 15px 60px 15px;
+  }
+}

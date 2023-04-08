@@ -1,0 +1,28 @@
+@import 'src/styles/media';
+
+.AsideInfoContainer {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 30px;
+  flex: 0 0 auto;
+}
+
+.AsideInfoContainer:nth-last-child(2) {
+  margin-bottom: 60px;
+}
+
+@include mobileMedia {
+  .AsideInfoContainer {
+    justify-content: left;
+    flex: 0 0 auto;
+    margin-bottom: 0;
+  }
+
+  .AsideInfoContainer:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .AsideInfoContainer:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'src/styles/media';
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@include mobileMedia {
+  .MainContainer {
+    align-items: center;
+  }
+}  

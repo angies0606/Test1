@@ -1,0 +1,30 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Header__LogoAndNavBox {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.Header__ContactsContainer {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.Header__Phone {
+  padding: 15px 0;
+  flex: 0 0 auto;
+  @include fontInter(500);
+  @include fontLarge();
+}
+
+.Header__SocialContacts {
+  padding: 15px 0 15px 30px;
+  height: 20px;
+}

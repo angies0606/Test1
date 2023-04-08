@@ -1,0 +1,43 @@
+@import 'src/styles/fonts';
+@import 'src/styles/media';
+
+.SloganContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+.SloganContainer__SloganLarge {
+  @include fontInter(400);
+  @include fontXXXLarge();
+  margin-bottom: 30px;
+}
+
+.SloganContainer__SloganSpan {
+  @include fontInter(900);
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.SloganContainer__SloganSmall {
+  @include fontMontserrat(400);
+  @include fontXLarge();
+}
+
+@include mobileMedia {
+  .SloganContainer {
+    flex-direction: column;
+    flex: 0 0 auto;
+    padding: 30px 0;
+    width: 100%;
+    height: auto;
+    @include mobileContentWidth;
+  }
+
+  .SloganContainer__SloganLarge {
+    @include fontXXLarge();
+  }
+}

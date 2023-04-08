@@ -1,0 +1,21 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/links';
+@import 'src/styles/media';
+
+.ContactsContainer {
+  display: flex;
+}
+
+.ContactsContainer__Phone {
+  transition: text-shadow 100ms ease-out;
+}
+
+.ContactsContainer__Phone:hover {
+  @include linkOnHover();
+  cursor: pointer;
+}
+
+.ContactsContainer__Address {
+  min-height: 16px;
+}

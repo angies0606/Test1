@@ -1,0 +1,26 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/links';
+
+.NavBar {
+  padding: 15px 26px;
+}
+
+.NavBar__Link {
+  color: #E4E5EA;
+  @include fontInter(500);
+  @include fontLarge();
+  @include linkStyle()
+}
+
+.NavBar__Link:hover {
+  @include linkOnHover($mainTextColor);
+}
+
+.NavBar__Link:hover {
+  @include linkVisited();
+}
+
+.NavBar__Link:not(:last-child) {
+  margin-right: 30px;
+}

@@ -1,0 +1,70 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/media';
+
+.AsideBar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15px 0;
+  flex: 0 0 auto;
+}
+
+.AsideBar__Header {
+  @include fontInter(500);
+  @include fontXLarge();
+  text-align: right;
+  margin-bottom: 40px;
+  flex: 0 0 auto;
+}
+
+.AsideBar__HeaderSpan {
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8px;
+  @include fontInter(700);
+}
+
+.AsideBar__Span1 {
+  background: linear-gradient(92deg, rgba(255, 114, 63, 0.9490196078) 27.14%, rgb(236 20 0 / 95%) 80.36%), #E4E5EA;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.AsideBar__Span2 {
+  background: linear-gradient(92deg, #FCB045 50.14%, rgba(252, 70, 4, 0.8196078431) 80.36%), #E4E5EA;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.AsideBar__Button {
+  padding: 20px 35px;
+  background: #4077F3;
+  @include fontInter(400);
+  @include fontLarge();
+  color: $mainTextColor;
+  border: none;
+  transition: opacity 100ms ease-out;
+  cursor: pointer;
+}
+
+.AsideBar__Button:hover {
+  opacity: 0.85;
+}
+
+@include mobileMedia {
+  .AsideBar {
+    height: auto;
+    width: 100%;
+    padding: 15px 0;
+    @include mobileContentWidth;
+  }
+
+  .AsideBar__Header {
+    @include fontInter(500);
+    @include fontXLarge();
+    text-align: left;
+    margin-bottom: 40px;
+    flex: 0 0 auto;
+  }
+}

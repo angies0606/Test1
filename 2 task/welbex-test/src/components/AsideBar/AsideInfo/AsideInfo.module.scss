@@ -1,0 +1,60 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/media';
+
+.AsideInfo {
+  text-align: right;
+  margin-left: 30px;
+  flex: 0 0 auto;
+}
+
+.AsideInfo__Header {
+  @include fontInter(500);
+  @include fontXLarge();
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.AsideInfo__String {
+  @include fontMontserrat(400);
+  @include fontLarge();
+}
+
+.AsideInfo__Dash {
+  display: none;
+}
+
+@include mobileMedia {
+  .AsideInfo {
+    text-align: left;
+    margin-left: 0px;
+    flex: 0 1 50%;
+    max-width: 180px;
+  }
+
+  .AsideInfo:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .AsideInfo__Header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include fontSmall(16px);
+    @include fontMontserrat(400);
+    margin-bottom: 0px;
+  }
+
+  .AsideInfo__Header:first-child {
+    margin-left: 0;
+  }
+
+  .AsideInfo__Dash {
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    margin-top: 6px;
+    background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+    margin-right: 5px;
+  }
+}

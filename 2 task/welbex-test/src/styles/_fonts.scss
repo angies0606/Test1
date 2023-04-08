@@ -1,0 +1,43 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+@mixin fontMontserrat($weight: 300) {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: $weight;
+}
+
+@mixin fontInter($weight: 400) {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: $weight;
+}
+
+@mixin fontSize($size, $lineHeight) {
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+@mixin fontSmall($lineHeight: 16px) {
+  @include fontSize(12px, $lineHeight);
+}
+
+@mixin fontMedium($lineHeight: 18px) {
+  @include fontSize(14px, $lineHeight);
+}
+
+@mixin fontLarge ($lineHeight: 20px) {
+  @include fontSize(16px, $lineHeight);
+}
+
+@mixin fontXLarge ($lineHeight: 22px) {
+  @include fontSize(18px, $lineHeight);
+}
+
+@mixin fontXXLarge ($lineHeight: 44px) {
+  @include fontSize(36px, $lineHeight);
+}
+
+@mixin fontXXXLarge ($lineHeight: 58px) {
+  @include fontSize(48px, $lineHeight);
+}

@@ -1,0 +1,151 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/links';
+@import 'src/styles/media';
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 20px;
+}
+
+.Footer__Headers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Footer__InfoBoxLastElement {
+  text-align: right;
+  justify-self: end;
+  margin-right: 0;
+}
+
+.Footer__InfoBoxLeftElement:not(:last-child) {
+  margin-right: 98px;
+}
+
+.Footer__InfoBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Footer__LeftInfoCol {
+  display: flex;
+}
+
+.Footer__LeftInfoCol + .Footer__InfoBoxLastElement {
+  margin-left: 58px;
+}
+
+.Footer__BottomInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  @include fontMontserrat(400);
+  @include fontSmall(15px);
+  text-align: right;
+  width: 100%;
+}
+
+.Footer__BottomLink {
+  @include linkStyle($mainTextColor, underline, none);
+}
+
+.Footer__BottomLink:hover {
+  @include linkOnHover(none);
+}
+
+.Footer__ContactsContainer {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Footer__Phone {
+  @include fontInter(500);
+  @include fontLarge();
+}
+
+.Footer__Address {
+  @include fontInter(400);
+  @include fontLarge();
+}
+
+.Footer__SocialContacts {
+  padding: 20px 0;
+}
+
+.Footer__SocialContactsLink:not(:last-child) {
+  margin-right: 14px;
+}
+
+@include tabletMedia {
+  .Footer__InfoBoxLeftElement:not(:last-child) {
+    margin-right: 58px;
+  }
+
+  .Footer__LeftInfoCol + .Footer__InfoBoxLastElement {
+    margin-left: 28px;
+  }
+}
+
+@include mobileMedia {
+  .Footer {
+    padding: 35px 15px 60px 15px;
+    background: #0E1014;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .Footer__InfoBoxLeftElement:not(:last-child) {
+    margin-right: 58px;
+  }
+
+  .Footer__InfoBox {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .Footer__LeftInfoCol {
+    flex-direction: column;
+  }
+
+  .Footer__InfoBoxLastElement {
+    text-align: left;
+    justify-self: start;
+    margin-left: 0;
+  }
+
+  .Footer__ContactsContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Footer__LeftInfoCol + .Footer__InfoBoxLastElement {
+    margin-left: 0;
+  }
+
+  .Footer__SocialContacts {
+    padding: 11px 0 12px 0;
+  }
+
+  .Footer__Address {
+    @include fontMedium(17px);
+  }
+
+  .Footer__InfoBox {
+    margin-bottom: 50px;
+    @include mobileContentWidth;
+  }
+
+  .Footer__BottomInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    @include fontMontserrat(400);
+    @include fontSmall(15px);
+    text-align: left;
+    @include mobileContentWidth;
+  }
+}
